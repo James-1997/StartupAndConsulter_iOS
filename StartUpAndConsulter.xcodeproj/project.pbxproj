@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		1D4DEEEC24A0552E001A684E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEEEB24A0552E001A684E /* MainViewController.swift */; };
 		1D4DEEEE24A05920001A684E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEEED24A05920001A684E /* NavigationController.swift */; };
 		1D4DEEF124A05953001A684E /* RouterNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEEF024A05953001A684E /* RouterNavigationProtocol.swift */; };
+		1DD8D99624A1A249003BB0C8 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 1DD8D99524A1A249003BB0C8 /* Stevia */; };
 		1DE5848A249FCA7F001476F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE58489249FCA7F001476F3 /* AppDelegate.swift */; };
 		1DE5848C249FCA7F001476F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5848B249FCA7F001476F3 /* SceneDelegate.swift */; };
 		1DE58494249FCA7F001476F3 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DE58492249FCA7F001476F3 /* Main.xcdatamodeld */; };
@@ -121,7 +122,7 @@
 		};
 		1DE584F7249FE41C001476F3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -190,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD8D99624A1A249003BB0C8 /* Stevia in Frameworks */,
 				1D4DEED824A0114D001A684E /* UI.framework in Frameworks */,
 				1D4DEEDC24A0114D001A684E /* Utilities.framework in Frameworks */,
 			);
@@ -541,6 +543,9 @@
 				1D4DEEDF24A0114D001A684E /* PBXTargetDependency */,
 			);
 			name = Controllers;
+			packageProductDependencies = (
+				1DD8D99524A1A249003BB0C8 /* Stevia */,
+			);
 			productName = Controllers;
 			productReference = 1D4DEED024A0113C001A684E /* Controllers.framework */;
 			productType = "com.apple.product-type.framework";
@@ -604,6 +609,9 @@
 				Base,
 			);
 			mainGroup = 1D34547A249F9C3200682FCF;
+			packageReferences = (
+				1DD8D99424A1A249003BB0C8 /* XCRemoteSwiftPackageReference "Stevia" */,
+			);
 			productRefGroup = 1D345485249F9C3200682FCF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1173,6 +1181,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DD8D99424A1A249003BB0C8 /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Stevia";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DD8D99524A1A249003BB0C8 /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DD8D99424A1A249003BB0C8 /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1DE58492249FCA7F001476F3 /* Main.xcdatamodeld */ = {

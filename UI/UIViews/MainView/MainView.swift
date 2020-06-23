@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Stevia
 
 public final class MainView: UITableView {
   
