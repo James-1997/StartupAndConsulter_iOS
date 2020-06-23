@@ -16,7 +16,7 @@ protocol FactoryController {
 
 class AppFactory: NSObject, FactoryController {
   static func makeController() -> UIViewController {
-    let mainVC = MainViewController()
+    let mainVC = MainTabBarViewController()
     return mainVC
   }
 }

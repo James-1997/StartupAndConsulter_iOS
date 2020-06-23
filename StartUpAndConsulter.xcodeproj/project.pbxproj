@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4A6FC924A1BE71007DBE9F /* UITableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A6FC824A1BE71007DBE9F /* UITableViewAdapter.swift */; };
 		1D4DEEC924A009A4001A684E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEEC824A009A4001A684E /* MainView.swift */; };
 		1D4DEED824A0114D001A684E /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3454B0249FA1DF00682FCF /* UI.framework */; };
 		1D4DEED924A0114D001A684E /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3454B0249FA1DF00682FCF /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -19,7 +20,12 @@
 		1D4DEEEC24A0552E001A684E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEEEB24A0552E001A684E /* MainViewController.swift */; };
 		1D4DEEEE24A05920001A684E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEEED24A05920001A684E /* NavigationController.swift */; };
 		1D4DEEF124A05953001A684E /* RouterNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEEF024A05953001A684E /* RouterNavigationProtocol.swift */; };
-		1DD8D99624A1A249003BB0C8 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 1DD8D99524A1A249003BB0C8 /* Stevia */; };
+		1DD8D99824A1A3A5003BB0C8 /* CodeViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8D99724A1A3A5003BB0C8 /* CodeViewProtocols.swift */; };
+		1DD8D99A24A1A3D4003BB0C8 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8D99924A1A3D4003BB0C8 /* MainTabBarViewController.swift */; };
+		1DD8D99C24A1A600003BB0C8 /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8D99B24A1A600003BB0C8 /* ControllerProtocol.swift */; };
+		1DD8D9A424A1A9CB003BB0C8 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8D9A324A1A9CB003BB0C8 /* CommonTableViewCell.swift */; };
+		1DD8D9A724A1AC3E003BB0C8 /* UITableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8D9A624A1AC3E003BB0C8 /* UITableViewController+Extension.swift */; };
+		1DD8D9AD24A1B0E3003BB0C8 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 1DD8D9AC24A1B0E3003BB0C8 /* Stevia */; };
 		1DE5848A249FCA7F001476F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE58489249FCA7F001476F3 /* AppDelegate.swift */; };
 		1DE5848C249FCA7F001476F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5848B249FCA7F001476F3 /* SceneDelegate.swift */; };
 		1DE58494249FCA7F001476F3 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DE58492249FCA7F001476F3 /* Main.xcdatamodeld */; };
@@ -140,12 +146,18 @@
 		1D3454B3249FA1DF00682FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D3454BD249FA25100682FCF /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3454C0249FA25100682FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D4A6FC824A1BE71007DBE9F /* UITableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewAdapter.swift; sourceTree = "<group>"; };
 		1D4DEEC824A009A4001A684E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1D4DEED024A0113C001A684E /* Controllers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Controllers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4DEED324A0113C001A684E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D4DEEEB24A0552E001A684E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1D4DEEED24A05920001A684E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		1D4DEEF024A05953001A684E /* RouterNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterNavigationProtocol.swift; sourceTree = "<group>"; };
+		1DD8D99724A1A3A5003BB0C8 /* CodeViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocols.swift; sourceTree = "<group>"; };
+		1DD8D99924A1A3D4003BB0C8 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		1DD8D99B24A1A600003BB0C8 /* ControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProtocol.swift; sourceTree = "<group>"; };
+		1DD8D9A324A1A9CB003BB0C8 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		1DD8D9A624A1AC3E003BB0C8 /* UITableViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Extension.swift"; sourceTree = "<group>"; };
 		1DE58487249FCA7F001476F3 /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE58489249FCA7F001476F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DE5848B249FCA7F001476F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD8D9AD24A1B0E3003BB0C8 /* Stevia in Frameworks */,
 				1DE584F3249FE41C001476F3 /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +204,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DD8D99624A1A249003BB0C8 /* Stevia in Frameworks */,
 				1D4DEED824A0114D001A684E /* UI.framework in Frameworks */,
 				1D4DEEDC24A0114D001A684E /* Utilities.framework in Frameworks */,
 			);
@@ -242,6 +254,7 @@
 				1DE584DF249FD943001476F3 /* String */,
 				1DE584EC249FE16E001476F3 /* UIColor */,
 				1DE584E1249FD952001476F3 /* UIImageView */,
+				1DD8D9A524A1AC19003BB0C8 /* UITableViewCell */,
 				1DE584E0249FD949001476F3 /* UIView */,
 				1DE584E8249FDC50001476F3 /* UIViewController */,
 				1D3454A6249FA1BE00682FCF /* Info.plist */,
@@ -252,7 +265,8 @@
 		1D3454B1249FA1DF00682FCF /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1D4DEEC724A00984001A684E /* UIViews */,
+				1DE584F2249FE305001476F3 /* Components */,
+				1DE584E9249FDF18001476F3 /* Style */,
 				1DE584DC249FD8DF001476F3 /* Resources */,
 				1D3454B3249FA1DF00682FCF /* Info.plist */,
 			);
@@ -270,8 +284,6 @@
 		1D4DEEC724A00984001A684E /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
-				1DE584F2249FE305001476F3 /* Components */,
-				1DE584E9249FDF18001476F3 /* Style */,
 				1D4DEECA24A009AA001A684E /* MainView */,
 			);
 			path = UIViews;
@@ -298,7 +310,9 @@
 		1D4DEEEA24A05513001A684E /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1D4DEEEB24A0552E001A684E /* MainViewController.swift */,
+				1DD8D99F24A1A8F7003BB0C8 /* ControllerProtocols */,
+				1DD8D99D24A1A8D9003BB0C8 /* MainController */,
+				1DD8D99E24A1A8E9003BB0C8 /* MainTabBar */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -318,6 +332,64 @@
 				1D4DEEF024A05953001A684E /* RouterNavigationProtocol.swift */,
 			);
 			name = RouterNavigationProtocol;
+			sourceTree = "<group>";
+		};
+		1DD8D99D24A1A8D9003BB0C8 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				1D4DEEEB24A0552E001A684E /* MainViewController.swift */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		1DD8D99E24A1A8E9003BB0C8 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1DD8D99924A1A3D4003BB0C8 /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		1DD8D99F24A1A8F7003BB0C8 /* ControllerProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				1DD8D99B24A1A600003BB0C8 /* ControllerProtocol.swift */,
+			);
+			path = ControllerProtocols;
+			sourceTree = "<group>";
+		};
+		1DD8D9A024A1A98E003BB0C8 /* ComponentsProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				1DD8D99724A1A3A5003BB0C8 /* CodeViewProtocols.swift */,
+				1D4A6FC824A1BE71007DBE9F /* UITableViewAdapter.swift */,
+			);
+			path = ComponentsProtocol;
+			sourceTree = "<group>";
+		};
+		1DD8D9A124A1A9A3003BB0C8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1DD8D9A024A1A98E003BB0C8 /* ComponentsProtocol */,
+				1DD8D9A224A1A9AF003BB0C8 /* UITableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1DD8D9A224A1A9AF003BB0C8 /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1DD8D9A324A1A9CB003BB0C8 /* CommonTableViewCell.swift */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		1DD8D9A524A1AC19003BB0C8 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1DD8D9A624A1AC3E003BB0C8 /* UITableViewController+Extension.swift */,
+			);
+			name = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		1DE58488249FCA7F001476F3 /* Main */ = {
@@ -430,6 +502,8 @@
 		1DE584F2249FE305001476F3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1DD8D9A124A1A9A3003BB0C8 /* Cells */,
+				1D4DEEC724A00984001A684E /* UIViews */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -502,6 +576,9 @@
 				1DE584F6249FE41C001476F3 /* PBXTargetDependency */,
 			);
 			name = UI;
+			packageProductDependencies = (
+				1DD8D9AC24A1B0E3003BB0C8 /* Stevia */,
+			);
 			productName = UI;
 			productReference = 1D3454B0249FA1DF00682FCF /* UI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -544,7 +621,6 @@
 			);
 			name = Controllers;
 			packageProductDependencies = (
-				1DD8D99524A1A249003BB0C8 /* Stevia */,
 			);
 			productName = Controllers;
 			productReference = 1D4DEED024A0113C001A684E /* Controllers.framework */;
@@ -672,6 +748,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DE584E5249FDB48001476F3 /* String+Utils.swift in Sources */,
+				1DD8D9A724A1AC3E003BB0C8 /* UITableViewController+Extension.swift in Sources */,
 				1DE584E3249FD976001476F3 /* Storyboarded.swift in Sources */,
 				1DE584E7249FDC4B001476F3 /* UIViewController+Utils.swift in Sources */,
 				1DE584EE249FE187001476F3 /* UIColor+Utils.swift in Sources */,
@@ -682,7 +759,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD8D9A424A1A9CB003BB0C8 /* CommonTableViewCell.swift in Sources */,
 				1DE584EB249FDF28001476F3 /* Style.swift in Sources */,
+				1D4A6FC924A1BE71007DBE9F /* UITableViewAdapter.swift in Sources */,
+				1DD8D99824A1A3A5003BB0C8 /* CodeViewProtocols.swift in Sources */,
 				1D4DEEC924A009A4001A684E /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,7 +778,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD8D99C24A1A600003BB0C8 /* ControllerProtocol.swift in Sources */,
 				1D4DEEEE24A05920001A684E /* NavigationController.swift in Sources */,
+				1DD8D99A24A1A3D4003BB0C8 /* MainTabBarViewController.swift in Sources */,
 				1D4DEEF124A05953001A684E /* RouterNavigationProtocol.swift in Sources */,
 				1D4DEEEC24A0552E001A684E /* MainViewController.swift in Sources */,
 			);
@@ -891,10 +973,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.robsonJames.Utilities;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "VALID_ARCHS ARCHS $(ARCHS_STANDARD)";
 			};
 			name = Debug;
 		};
@@ -918,9 +1002,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.robsonJames.Utilities;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "VALID_ARCHS ARCHS $(ARCHS_STANDARD)";
 			};
 			name = Release;
 		};
@@ -1194,7 +1280,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1DD8D99524A1A249003BB0C8 /* Stevia */ = {
+		1DD8D9AC24A1B0E3003BB0C8 /* Stevia */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1DD8D99424A1A249003BB0C8 /* XCRemoteSwiftPackageReference "Stevia" */;
 			productName = Stevia;
