@@ -1,8 +1,11 @@
 import Foundation
 import UIKit
+import UI
 
 public class MainTabBarViewController: UITabBarController {
-  private let firstScreen = UINavigationController(rootViewController: MainViewController())
+  private var tabBarIcon: ImagePaths.TabBarIcons?
+  
+  private let startupViewController = UINavigationController(rootViewController: StartupViewController())
   private let secondScreen = UINavigationController(rootViewController: UIViewController())
   private let thirdScreen = UINavigationController(rootViewController: UIViewController())
   private let fourthyScreen = UINavigationController(rootViewController: UIViewController())
@@ -11,39 +14,43 @@ public class MainTabBarViewController: UITabBarController {
     super.viewDidLoad()
     setup()
   }
+  
+
 }
 
 extension MainTabBarViewController: ControllerProtocol {
   func setup() {
     subviewControllers()
+    tabBar.unselectedItemTintColor = .gray
     if let items = tabBar.items {
       for (index, item) in items.enumerated() {
         switch(index) {
           case 0:
-            item.title = "firstScreenTitle"
-            item.image = UIImage(named: "firstScreenImagePath")
+            tabBarIcon = .startup
             break
           case 1:
-            item.title = "secondScreenTitle"
-            item.image = UIImage(named: "secondScreenImagePath")
+           tabBarIcon = .consulter
             break
           case 2:
-            item.title = "thirdScreenTitle"
-            item.image = UIImage(named: "thirdScreenImagePath")
+            tabBarIcon = .network
             break
           case 3:
-            item.title = "fourthyScreenTitle"
-            item.image = UIImage(named: "fourthyScreenImagePath")
+            tabBarIcon = .profile
             break
           default:
             break
         }
+        item.title = tabBarIcon?.title
+        item.image = tabBarIcon?.icon
       }
     }
   }
   
   func subviewControllers() {
-     let viewControllers = [firstScreen, secondScreen, thirdScreen, fourthyScreen]
+    secondScreen.view.backgroundColor = .red
+    thirdScreen.view.backgroundColor = .yellow
+    fourthyScreen.view.backgroundColor = .blue
+     let viewControllers = [startupViewController, secondScreen, thirdScreen, fourthyScreen]
      setViewControllers(viewControllers, animated: true)
    }
 }

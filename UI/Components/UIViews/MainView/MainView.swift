@@ -10,11 +10,11 @@ import Utilities
 import UIKit
 import Stevia
 
-public final class MainView: UITableView {
+public final class MainView: UIView {
   
   public init() {
-    super.init(frame: .zero, style: .grouped)
-    self.backgroundColor = .red
+    super.init(frame: .zero)
+    self.backgroundColor = .commonColor
   }
   
   required init?(coder: NSCoder) {
