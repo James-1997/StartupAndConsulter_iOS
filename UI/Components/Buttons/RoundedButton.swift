@@ -46,9 +46,9 @@ public class RoundedButton: UIButton {
         self.radius = self.frame.size.height / 2
       }
       
-      let background = UIImage()
+      _ = UIImage()
       
-      self.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, for: state)
+      self.setBackgroundImage(nil, for: state)
       self.setTitleColor(titleColor, for: state)
     }
   }
