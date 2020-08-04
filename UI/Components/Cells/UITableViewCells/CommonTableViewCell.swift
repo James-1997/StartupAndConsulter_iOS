@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Stevia
 
 public class CommonTableViewCell: UITableViewCell {
   
@@ -66,19 +67,19 @@ extension CommonTableViewCell: CodeViewSetup {
   
   func customComponents() {
     self.separatorInset = .zero
-    elementImageView.backgroundColor = UIColor.darkGray
+    elementImageView.backgroundColor = UIColor.white
     
     elementImageView.contentMode = .scaleAspectFill
     elementImageView.size(62)
     elementImageView.frame.size = CGSize(width: 62, height: 62)
     elementImageView.layer.cornerRadius = elementImageView.frame.height / 2
     elementImageView.layer.borderWidth = 2
-    elementImageView.layer.borderColor = UIColor.yellow.cgColor
+    elementImageView.layer.borderColor = UIColor.lightGray.cgColor
     elementImageView.clipsToBounds = true
     elementImageView.layer.masksToBounds = true
     
     self.backgroundColor = .clear
-    viewForCell.backgroundColor = UIColor.lightGray
+    viewForCell.backgroundColor = UIColor.backgroundColor
     viewForCell.layer.cornerRadius = 16
     viewForCell.layer.borderColor = UIColor.black.cgColor
     viewForCell.layer.borderWidth = 2
@@ -107,12 +108,13 @@ extension CommonTableViewCell: CodeViewSetup {
   
   public func setType(type: String, color: UIColor = .lightText) {
       typeLabel.text = type
-      
   }
   
   public func setImage(imageUrl: String) {
     
-    
   }
-    
+}
+
+extension UIColor {
+  fileprivate static let backgroundColor = UIColor(named: "ConsulterCellBackground")
 }

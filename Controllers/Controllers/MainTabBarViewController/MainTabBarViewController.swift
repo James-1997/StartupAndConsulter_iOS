@@ -5,17 +5,15 @@ import UI
 public class MainTabBarViewController: UITabBarController {
   private var tabBarIcon: ImagePaths.TabBarIcons?
   
-  private let startupViewController = UINavigationController(rootViewController: StartupViewController())
-  private let secondScreen = UINavigationController(rootViewController: UIViewController())
-  private let thirdScreen = UINavigationController(rootViewController: UIViewController())
-  private let fourthyScreen = UINavigationController(rootViewController: UIViewController())
+  private let startupVC = UINavigationController(rootViewController: StartupViewController())
+  private let consulterVC = UINavigationController(rootViewController: ConsulterViewController())
+  private let networkVC = UINavigationController(rootViewController: NetworkViewController())
+  private let profileVC = UINavigationController(rootViewController: ProfileViewController())
   
   public override func viewDidLoad() {
     super.viewDidLoad()
     setup()
   }
-  
-
 }
 
 extension MainTabBarViewController: ControllerProtocol {
@@ -47,10 +45,7 @@ extension MainTabBarViewController: ControllerProtocol {
   }
   
   func subviewControllers() {
-    secondScreen.view.backgroundColor = .red
-    thirdScreen.view.backgroundColor = .yellow
-    fourthyScreen.view.backgroundColor = .blue
-     let viewControllers = [startupViewController, secondScreen, thirdScreen, fourthyScreen]
+     let viewControllers = [startupVC, consulterVC, networkVC, profileVC]
      setViewControllers(viewControllers, animated: true)
    }
 }

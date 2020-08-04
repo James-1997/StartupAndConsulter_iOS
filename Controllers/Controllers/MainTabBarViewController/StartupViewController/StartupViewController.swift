@@ -13,14 +13,10 @@ import UI
 
 public class StartupViewController: UITableViewController {
   
-  public override func loadView() {
-    self.view = MainView()
-    super.loadView()
-  }
-  
   public init() {
     super.init(style: .grouped)
     self.tableView.separatorStyle = .none
+    self.view.backgroundColor = UIColor(named: "DefaultLightDark")
   }
   
   required init?(coder: NSCoder) {
