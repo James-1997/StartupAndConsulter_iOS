@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Stevia",
+        "repositoryURL": "https://github.com/freshOS/Stevia",
+        "state": {
+          "branch": "master",
+          "revision": "97caf4ccecf50d6ab5ee9bdf67094bc540ede864",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
