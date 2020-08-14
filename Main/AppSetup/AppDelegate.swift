@@ -4,13 +4,15 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    return true
-  }
+  var window: UIWindow?
   
-  // MARK: UISceneSession Lifecycle
-  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+   window = UIWindow(frame: UIScreen.main.bounds)
+    let rootViewController = AppFactory.makeController()
+    let navigationController = UINavigationController(rootViewController: rootViewController)
+    window?.rootViewController = navigationController
+    window?.makeKeyAndVisible()
+    return true
   }
   
   // MARK: - Core Data stack

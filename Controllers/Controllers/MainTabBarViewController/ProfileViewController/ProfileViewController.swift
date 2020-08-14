@@ -13,6 +13,8 @@ public class ProfileViewController: UIViewController {
   
   public override func viewDidLoad() {
     super.viewDidLoad()
+    style()
+    autolayout()
   }
   
   init() {
@@ -24,7 +26,7 @@ public class ProfileViewController: UIViewController {
   }
   
   func style() {
-    
+    setLargeTitle(title: "Profile")
   }
   
   required init?(coder: NSCoder) {

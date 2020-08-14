@@ -10,44 +10,75 @@ import Foundation
 import UIKit
 import Utilities
 import UI
+import Stevia
 
-public class NetworkViewController: UITableViewController {
+public class NetworkViewController: UIViewController {
+  
+  internal let tableView = UITableView(frame: .zero)
   
   public init() {
-    super.init(style: .grouped)
-    self.tableView.separatorStyle = .none
-    self.view.backgroundColor = UIColor(named: "DefaultLightDark")
+    super.init(nibName: nil, bundle: nil)
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    style()
+    autolayout()
+  }
+  
+  public func style() {
+    setLargeTitle(title: "Network")
+    view.backgroundColor = UIColor(named: "DefaultLightDark")
+    setupTableView()
+  }
+  
+  func setupTableView() {
+    tableView.separatorStyle = .none
+    tableView.delegate = self
+    tableView.dataSource = self
+    tableView.register(cell: CommonTableViewCell.self)
+    view.subviews([tableView])
+    view.addSubview(tableView)
+  }
+  
+  public func autolayout() {
+    tableView.fillHorizontally()
+    tableView.Top == view.safeAreaLayoutGuide.Top
+    self.tableView.Bottom == view.Bottom
+  }
+}
+
+extension NetworkViewController: UITableViewDelegate {
+
+  public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+      return 0
+  }
+  
+  public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 150
   }
   
-  public override func viewDidLoad() {
-    super.viewDidLoad()
-    self.tableView.register(cell: CommonTableViewCell.self)
-  }
+}
+
+extension NetworkViewController: UITableViewDataSource {
+  public func numberOfSections(in tableView: UITableView) -> Int {
+     return 1
+   }
   
-  public override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
-  public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 6
   }
   
-  public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let identifier = CommonTableViewCell.identifier
-    guard let cell = getCell(tableView: tableView,
-                             indexPath: indexPath,
-                             identifier: identifier) as? CommonTableViewCell else {
-                              return UITableViewCell()
+    guard let cell = self.tableView.getCell(indexPath: indexPath,
+                                            identifier: identifier) as? CommonTableViewCell else {
+                                              return UITableViewCell()
     }
     return cell
   }
-  
 }
