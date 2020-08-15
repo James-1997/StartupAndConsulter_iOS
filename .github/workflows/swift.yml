@@ -1,30 +1,17 @@
-name: Swift
-
-on:
+name: Build and Test app
+on: 
   push:
-    branches: [ iOS ]
-  pull_request:
     branches: [ iOS ]
 jobs:
   build:
-
-    runs-on: macos-latest
-
+    runs-on: [macos-latest]
+    env:
+      XC_VERSION: ${{ '11.4' }}
+      XC_WORKSPACE: ${{ 'RocketUp.xcworkspace' }}
+      XC_SCHEME: ${{ 'Main' }}
     steps:
-    - uses: actions/checkout@v2
-    - name: Select Xcode
-    run: sudo xcode-select -switch /Applications/Xcode_11.3.app
-    - name: Xcode Version
-    run: /usr/bin/xcodebuild -version
-    - name: Build archive
-    run: |
-      xcodebuild -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj \
-        -configuration Release -scheme CocoaHeadsNL \
-        -derivedDataPath DerivedData \
-        -archivePath DerivedData/Archive/CocoaHeadsNL archive
-    - name: Export Archive
-    run: |
-      xcodebuild -exportArchive \
-        -archivePath DerivedData/Archive/CocoaHeadsNL.xcarchive \
-        -exportOptionsPlist provisioning/App-Store.plist \
-        -exportPath DerivedData/ipa
+    - name: Select latest Xcode
+      run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
+#     - uses: actions/checkout@v2
+#     - name: Run Unit and UI Tests
+#       run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11'
