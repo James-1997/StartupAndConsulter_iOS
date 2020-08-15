@@ -6,12 +6,23 @@ jobs:
   build:
     runs-on: [macos-latest]
     env:
-      XC_VERSION: ${{ '11.4' }}
+      XC_VERSION: ${{ '11.3' }}
       XC_WORKSPACE: ${{ 'RocketUp.xcworkspace' }}
       XC_SCHEME: ${{ 'Main' }}
     steps:
-    - name: Select latest Xcode
-      run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
-#     - uses: actions/checkout@v2
-#     - name: Run Unit and UI Tests
-#       run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11'
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - name: Xcode version
+        run: /usr/bin/xcodebuild -version
+      - name: Build archive
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath DerivedData/Archive/Main.xcarchive \
+            -exportOptionsPlist provisioning/App-Store.plist \
+            -exportPath DerivedData/ipa
+      - name: Export Archive
+        run: |
+         xcodebuild -exportArchive \
+            -archivePath DerivedData/Archive/Main.xcarchive \
+            -exportOptionsPlist provisioning/App-Store.plist \
+            -exportPath DerivedData/ipa
