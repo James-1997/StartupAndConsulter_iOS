@@ -1,0 +1,28 @@
+name: Build and Test app
+on: 
+  push:
+    branches: [ iOS ]
+jobs:
+  build:
+    runs-on: [macos-latest]
+    env:
+      XC_VERSION: ${{ '11.6' }}
+      XC_WORKSPACE: ${{ 'RocketUp.xcworkspace' }}
+      XC_SCHEME: ${{ 'Main' }}
+    steps:
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_11.6.app
+      - name: Xcode version
+        run: /usr/bin/xcodebuild -version
+#       - name: Build archive
+#         run: |
+#           xcodebuild -exportArchive \
+#             -archivePath DerivedData/Archive/Main.xcarchive \
+#             -exportOptionsPlist provisioning/App-Store.plist \
+#             -exportPath DerivedData/ipa
+#       - name: Export Archive
+#         run: |
+#          xcodebuild -exportArchive \
+#             -archivePath DerivedData/Archive/Main.xcarchive \
+#             -exportOptionsPlist provisioning/App-Store.plist \
+#             -exportPath DerivedData/ipa
